@@ -5,7 +5,7 @@ Assignment:
 *******************/
 #include <stdio.h>
 
-// REMIDER : YOU CANT USE ANY CONTROL FLOW OPERATIONS OR FUNCTIONS, ONLY BITWISE.
+// REMINDER : YOU CANT USE ANY CONTROL FLOW OPERATIONS OR FUNCTIONS, ONLY BITWISE.
 
 int main() {
   
@@ -13,7 +13,16 @@ int main() {
   printf("What bit:\n");
   /*Scan two integers (representing number and a position)
   Print the bit in this position. */
-  
+
+  printf("please enter a number \n");
+  int num1;
+  scanf("%d",&num1);
+  int pos1;
+  printf("please enter a position \n");
+  scanf("%d",&pos1);
+  printf("%d",(num1>>pos1)&1);
+
+
   // Set bit
   printf("\nSet bit:\n");
   /*Scan two integers (representing number and a position)
@@ -21,6 +30,16 @@ int main() {
   Print the output
   Now make sure it's "off" (equal to 0)
   Print the output */
+
+  printf("please enter a number \n");
+  int num2;
+  scanf("%d",&num2);
+  int pos2;
+  printf("please enter a position \n");
+  scanf("%d",&pos2);
+  printf("%d \n", num2^(1<<pos2));
+  printf("%d \n", num2^0);
+
 
   // Toggle bit
   printf("\nToggle bit:\n");
@@ -32,6 +51,11 @@ int main() {
   printf("\nEven - Odd:\n");
   /* Scan an integer
   If the number is even - print 1, else - print 0. */
+
+  printf("please enter a number \n");
+  int num4;
+  scanf("%d",&num4);
+  printf("%d",num4&0);
   
   // 3, 5, 7, 11
   printf("\n3, 5, 7, 11:\n");
