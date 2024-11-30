@@ -37,8 +37,8 @@ int main() {
   int pos2;
   printf("please enter a position \n");
   scanf("%d",&pos2);
-  printf("%d \n", num2^(1<<pos2));
-  printf("%d \n", num2^0);
+  printf("%d \n", num2|(1<<pos2));
+  printf("%d \n", (num2|(1<<pos2))^(1<<pos2));
 
 
   // Toggle bit
@@ -46,6 +46,15 @@ int main() {
   /*Scan two integers (representing number and a position)
   Toggle the bit in this position
   Print the new number */
+
+  printf("please enter a number \n");
+  int num3;
+  scanf("%d", &num3);
+  int pos3;
+  printf("please enter a position \n");
+  scanf("%d", &pos3);
+  printf("%d \n", num3^1<<pos3);
+
   
   // Even - Odd
   printf("\nEven - Odd:\n");
@@ -56,12 +65,26 @@ int main() {
   int num4;
   scanf("%d",&num4);
   printf("%d",num4&0);
+
   
   // 3, 5, 7, 11
   printf("\n3, 5, 7, 11:\n");
   /* Scan two integers in octal base
   sum them up and print the result in hexadecimal base
   Print only 4 bits, in positions: 3,5,7,11 in the result. */
+
+  printf("please enter the first octa number \n");
+  int num5;
+  scanf("%o", &num5);
+  printf("please enter the second octa number \n");
+  int num6;
+  scanf("%o", &num6);
+  printf("%x \n", num5 + num6);
+  printf("%d", ((num5 + num6)>>3)&1);
+  printf("%d", ((num5 + num6)>>5)&1);
+  printf("%d", ((num5 + num6)>>7)&1);
+  printf("%d \n", ((num5 + num6)>>11)&1);
+
 
   printf("Bye!\n");
   
