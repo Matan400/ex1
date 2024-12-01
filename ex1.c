@@ -80,10 +80,15 @@ int main() {
   int num6;
   scanf("%o", &num6);
   printf("%x \n", num5 + num6);
+  // sum of both numbers
   printf("%d", ((num5 + num6)>>3)&1);
+  //printing the third digit with xor
   printf("%d", ((num5 + num6)>>5)&1);
+  //printing the fifth digit with xor
   printf("%d", ((num5 + num6)>>7)&1);
+  //printing the seventh digit with xor
   printf("%d \n", ((num5 + num6)>>11)&1);
+  //printing the eleventh digit with xor
 
 
   printf("Bye!\n");
